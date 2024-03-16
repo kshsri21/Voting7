@@ -1,6 +1,6 @@
 import {ethers}  from "ethers";
 import abi from "../constants/abi.json"
-//0xCCC15B5CCAF92d34f3A99c2270920D3Fcf42c290
+//0x37E12969960C760E9538b77c3e9D8693A92537a8
 //0xe247F53E1201D5573a2dFA6600a6daE9753BB16e - erc20
 export const getWeb3State = async()=>{
   let [contractInstance,selectedAccount,chainId] = [null,null,null,null];
@@ -20,7 +20,7 @@ export const getWeb3State = async()=>{
       const provider = new ethers.BrowserProvider(window.ethereum);
       //write operation
       const signer = await provider.getSigner();
-      const contractAddress = "0xCCC15B5CCAF92d34f3A99c2270920D3Fcf42c290";
+      const contractAddress = "0x37E12969960C760E9538b77c3e9D8693A92537a8";
       contractInstance = new ethers.Contract(contractAddress,abi,signer);
       return {contractInstance,chainId,selectedAccount};
   } catch (error) {

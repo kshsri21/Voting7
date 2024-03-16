@@ -1,12 +1,18 @@
 
 import Web3StateProvider from './context/Web3StateProvider'
-import Child from "./Child"
 import './App.css'
+import CandidateRegistration from './pages/CandidateRegistration/CandidateRegistration';
+import VoterRegistration from './pages/VoterRegistration/VoterRegistration';
+import DispalyCandidate from './components/displayCandidate/DisplayCandidate';
+import DispalyVoter from './components/displayVoter/DisplayVoter';
 function App() {
   return (
     <div> 
       <Web3StateProvider>
-        <Child/>
+       {/* <CandidateRegistration/> */}
+       {/* <VoterRegistration/> */}
+       {/* <DispalyCandidate/> */}
+       <DispalyVoter/>
       </Web3StateProvider> 
     </div>
   )
